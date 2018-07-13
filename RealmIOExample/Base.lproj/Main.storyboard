@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,65 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RealmIOExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Matricula" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCw-r2-hmS">
+                                <rect key="frame" x="16" y="327" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vWO-jo-5L3">
+                                <rect key="frame" x="16" y="389" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unifor" translatesAutoresizingMaskIntoConstraints="NO" id="ZPI-uV-Idi">
+                                <rect key="frame" x="75" y="52" width="225" height="225"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wt7-N6-WvM">
+                                <rect key="frame" x="50" y="451" width="275" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Entrar"/>
+                                <connections>
+                                    <action selector="clicarBotao:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Po1-9l-X5I"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZPI-uV-Idi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Q8-yS-DQH"/>
+                            <constraint firstItem="ZPI-uV-Idi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="32B-ML-a1u"/>
+                            <constraint firstItem="vWO-jo-5L3" firstAttribute="top" secondItem="tCw-r2-hmS" secondAttribute="bottom" constant="32" id="A88-XN-d37"/>
+                            <constraint firstItem="tCw-r2-hmS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bcw-ap-vMs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tCw-r2-hmS" secondAttribute="trailing" constant="16" id="JSK-S2-ihi"/>
+                            <constraint firstItem="Wt7-N6-WvM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JdI-5m-hBd"/>
+                            <constraint firstItem="vWO-jo-5L3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Mes-6x-8Dg"/>
+                            <constraint firstItem="tCw-r2-hmS" firstAttribute="top" secondItem="ZPI-uV-Idi" secondAttribute="bottom" constant="50" id="csd-iW-KPK"/>
+                            <constraint firstItem="Wt7-N6-WvM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="f9N-hn-hhG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vWO-jo-5L3" secondAttribute="trailing" constant="16" id="gFy-77-xmf"/>
+                            <constraint firstItem="Wt7-N6-WvM" firstAttribute="top" secondItem="vWO-jo-5L3" secondAttribute="bottom" constant="32" id="jxz-dg-DGa"/>
+                            <constraint firstItem="tCw-r2-hmS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jzZ-ft-BmU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="MatriculaTF" destination="tCw-r2-hmS" id="1dU-xr-UWy"/>
+                        <outlet property="SenhaTF" destination="vWO-jo-5L3" id="hJr-h0-r12"/>
+                        <outlet property="TelaLogin" destination="8bC-Xf-vdC" id="bnC-o1-tzp"/>
+                        <outlet property="botaoEntrar" destination="Wt7-N6-WvM" id="qwB-YS-jSz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Unifor" width="225" height="225"/>
+    </resources>
 </document>
